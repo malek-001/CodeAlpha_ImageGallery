@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive image gallery created for CodeAlpha Frontend Development Internship.">
+    <title>Vistara Gallery | CodeAlpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">Vistara<span>.</span></div>
+            <a href="#gallery" class="nav-link">Explore</a>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">CODEALPHA • FRONTEND PROJECT</p>
+            <h1>Moments worth <span>remembering.</span></h1>
+            <p class="hero-text">
+                A modern responsive image gallery with filters, smooth animations,
+                lightbox preview and keyboard controls.
+            </p>
+            <a href="#gallery" class="hero-btn">Explore Gallery ↓</a>
+        </div>
+    </header>
+
+    <main id="gallery" class="gallery-section">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">COLLECTION</p>
+                <h2>Explore the world</h2>
+            </div>
+            <p class="count-text" id="countText">6 photos</p>
+        </div>
+
+        <div class="filters" aria-label="Gallery filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="travel">Travel</button>
+        </div>
+
+        <div class="gallery" id="galleryGrid">
+
+            <article class="gallery-item" data-category="nature" data-title="Golden Mountains" data-location="Mountain sunrise">
+                <img src="images/Golden-Mountains.jpg" alt="Golden mountain sunrise" loading="lazy">
+                <div class="image-info">
+                    <span>Nature</span>
+                    <h3>Golden Mountains</h3>
+                    <p>Mountain sunrise</p>
+                </div>
+                <button class="view-btn" aria-label="View Golden Mountains">↗</button>
+            </article>
+
+            <article class="gallery-item" data-category="city" data-title="City Lights" data-location="Urban skyline">
+                <img src="images/City-Light.jpg" alt="City skyline" loading="lazy">
+                <div class="image-info">
+                    <span>City</span>
+                    <h3>City Lights</h3>
+                    <p>Urban skyline</p>
+                </div>
+                <button class="view-btn" aria-label="View City Lights">↗</button>
+            </article>
+
+            <article class="gallery-item" data-category="travel" data-title="Ocean Escape" data-location="Tropical coast">
+                <img src="images/Ocean-Escape.jpg" alt="Tropical beach" loading="lazy">
+                <div class="image-info">
+                    <span>Travel</span>
+                    <h3>Ocean Escape</h3>
+                    <p>Tropical coast</p>
+                </div>
+                <button class="view-btn" aria-label="View Ocean Escape">↗</button>
+            </article>
+
+            <article class="gallery-item" data-category="nature" data-title="Forest Trail" data-location="Quiet woodland">
+                <img src="images/Forest-Trail.jpg" alt="Forest trail" loading="lazy">
+                <div class="image-info">
+                    <span>Nature</span>
+                    <h3>Forest Trail</h3>
+                    <p>Quiet woodland</p>
+                </div>
+                <button class="view-btn" aria-label="View Forest Trail">↗</button>
+            </article>
+
+            <article class="gallery-item" data-category="city" data-title="Urban Drive" data-location="Downtown avenue">
+                <img src="images/Urban-Drive.jpg" alt="Urban avenue" loading="lazy">
+                <div class="image-info">
+                    <span>City</span>
+                    <h3>Urban Drive</h3>
+                    <p>Downtown avenue</p>
+                </div>
+                <button class="view-btn" aria-label="View Urban Drive">↗</button>
+            </article>
+
+            <article class="gallery-item" data-category="travel" data-title="Alpine Lake" data-location="Mountain getaway">
+                <img src="images/Alpiine-Lake.jpg" alt="Mountain landscape" loading="lazy">
+                <div class="image-info">
+                    <span>Travel</span>
+                    <h3>Alpine Lake</h3>
+                    <p>Mountain getaway</p>
+                </div>
+                <button class="view-btn" aria-label="View Alpine Lake">↗</button>
+            </article>
+
+        </div>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeBtn" aria-label="Close preview">×</button>
+        <button class="lightbox-nav prev" id="prevBtn" aria-label="Previous image">‹</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+            <div class="lightbox-caption">
+                <div>
+                    <span id="lightboxCategory"></span>
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxLocation"></p>
+                </div>
+                <span class="counter" id="counter">1 / 6</span>
+            </div>
+        </div>
+
+        <button class="lightbox-nav next" id="nextBtn" aria-label="Next image">›</button>
+    </div>
+
+    <footer>
+        <p>© 2026 Vistara Gallery</p>
+        <p>CodeAlpha Frontend Development Internship</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
